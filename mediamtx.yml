@@ -1,0 +1,18 @@
+rtmp:
+  enabled: true
+  port: 1935
+
+rtsp:
+  enabled: true
+  port: 8554
+
+hls:
+  enabled: true
+  hlsAddress: ''
+  hlsPort: 8888
+  hlsDirectory: '/tmp/hls'
+
+paths:
+  live:
+    source: rtmp
+    sourceOnDemand: true
