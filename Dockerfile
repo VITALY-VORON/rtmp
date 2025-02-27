@@ -2,6 +2,7 @@
 FROM node:18 AS base
 WORKDIR /app
 COPY . /app
+RUN npm install -g yarn && yarn install
 RUN yarn install
 
 # === Frontend Build Stage ===
