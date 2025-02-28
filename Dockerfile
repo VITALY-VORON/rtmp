@@ -1,7 +1,6 @@
 # === Base stage for dependencies ===
 FROM node:18 AS base
 WORKDIR /app
-COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
 # === Frontend Build Stage ===
