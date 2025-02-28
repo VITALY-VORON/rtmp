@@ -1,7 +1,6 @@
-# === Base stage for dependencies ===
+# === Base stage ===
 FROM node:18 AS base
 WORKDIR /app
-RUN yarn install --frozen-lockfile
 
 # === Frontend Build Stage ===
 FROM base AS front-build
