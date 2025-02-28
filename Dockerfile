@@ -7,11 +7,13 @@ RUN yarn install
 # === Frontend Build Stage ===
 FROM base AS front-build
 WORKDIR /app/apps/client
+RUN yarn install
 RUN yarn build
 
 # === Backend Build Stage ===
 FROM base AS back-build
 WORKDIR /app/apps/server
+RUN yarn install
 RUN yarn build
 
 # === Production Stage ===
